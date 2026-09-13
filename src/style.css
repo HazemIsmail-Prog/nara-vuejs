@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Cormorant Garamond', serif;
+  --font-sans: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #1a1212;
+  --color-bronze: #6a2a2a;
+  --color-stone: #e0d0d0;
+  --color-cream: #f7f1f0;
+}
+
+html {
+  overflow-x: clip;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
