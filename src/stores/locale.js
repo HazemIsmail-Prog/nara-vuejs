@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import { computed, ref, watch } from 'vue'
 
 export const useLocaleStore = defineStore('nara-i18n', () => {
-  const lang = ref(localStorage.getItem('nara-locale') === 'en' ? 'en' : 'ar')
+  const lang = ref(localStorage.getItem('nara-locale') === 'ar' ? 'ar' : 'en')
 
   const isRtl = computed(() => lang.value === 'ar')
   const dir = computed(() => (isRtl.value ? 'rtl' : 'ltr'))
@@ -18,7 +18,7 @@ export const useLocaleStore = defineStore('nara-i18n', () => {
   )
 
   function setLang(value) {
-    lang.value = value === 'en' ? 'en' : 'ar'
+    lang.value = value === 'ar' ? 'ar' : 'en'
   }
 
   function t(ar, en) {
